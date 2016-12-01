@@ -192,6 +192,8 @@ class ResultSets(object):
             return self.parseDBInstanceObject(output)
         elif isinstance(output, s3.bucket.Bucket):
             return self.parseBucket(output)
+        elif isinstance(output, ec2.elb.loadbalancer.LoadBalancer):
+            return self.parseLoadbalancers(output)
         else:
             return output
 
@@ -258,6 +260,9 @@ class ResultSets(object):
     def parseDBInstanceObject(self, output):
         dbinstance_data = {field: getattr(output, field) for field in FieldLists.DBINSTANCE}
         return dbinstance_data
+
+    def parseLoadbalancers(self, output):
+        return output.__str__()
 
     def parseEC2Object(self, output):
         # Looks like everything that is an EC2Object pretty much only has these extra

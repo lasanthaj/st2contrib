@@ -379,3 +379,21 @@ This trigger is emitted when a single message is received from a queue.
 * sqs\_set\_queue\_attribute.yaml
 * sqs\_set\_request\_hook.yaml
 * sqs\_skip\_proxy.yaml
+
+### ELB Actions
+
+* elb\_apply\_security\_groups\_to\_lb.yaml
+* elb\_attach\_lb\_to\_subnets.yaml
+* elb\_create\_instance.yaml
+* elb\_delete\_load\_balancer\_listeners.yaml
+* elb\_delete.yaml
+* elb\_deregister\_instances.yaml
+* elb\_describe\_instance\_health.yaml
+* elb\_detach\_lb\_from\_subnets.yaml
+* elb\_disable\_availability\_zones.yaml
+* elb\_enable\_availability\_zones.yaml
+* elb\_get\_all\_lb\_attributes.yaml
+* elb\_get\_all\_loadbalancers.yaml
+* elb\_register\_instances.yaml
+
+

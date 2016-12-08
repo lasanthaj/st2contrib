@@ -394,6 +394,9 @@ This trigger is emitted when a single message is received from a queue.
 * elb\_enable\_availability\_zones.yaml
 * elb\_get\_all\_lb\_attributes.yaml
 * elb\_get\_all\_loadbalancers.yaml
+* elb\_modify\_lb\_attribute.yaml
 * elb\_register\_instances.yaml
-
+* elb\_set\_lb\_listener\_SSL\_certificate.yaml
+* elb\_set\_lb\_policies\_of\_backend\_server.yaml
+* elb\_set\_lb\_policies\_of\_listener.yaml
 

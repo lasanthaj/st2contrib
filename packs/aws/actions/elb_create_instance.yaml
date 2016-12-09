@@ -15,25 +15,20 @@ parameters:
     type: string
     required: true
   zones:
-    type: array
-    required: true
+    type: string
   listeners:
-    type: array
-    required: true
+    type: string
   subnets:
     type: array
-    required: true
   security_groups:
     type: array
-    required: true
   scheme:
     type: string
-    required: true
   complex_listeners:
     type: array
-    required: true
   module_path:
     default: boto.ec2.elb
     immutable: true
     type: string
 runner_type: run-python
+

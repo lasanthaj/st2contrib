@@ -180,6 +180,8 @@ class ResultSets(object):
             return self.parseTag(output)
         elif isinstance(output, ec2.ec2object.EC2Object):
             return self.parseEC2Object(output)
+        elif isinstance(output, ec2.elb.loadbalancer.LoadBalancer):
+            return self.parseLoadbalancers(output)
         elif isinstance(output, route53.record.Record):
             return self.parseRecord(output)
         elif isinstance(output, route53.zone.Zone):
@@ -192,8 +194,6 @@ class ResultSets(object):
             return self.parseDBInstanceObject(output)
         elif isinstance(output, s3.bucket.Bucket):
             return self.parseBucket(output)
-        elif isinstance(output, ec2.elb.loadbalancer.LoadBalancer):
-            return self.parseLoadbalancers(output)
         else:
             return output
 

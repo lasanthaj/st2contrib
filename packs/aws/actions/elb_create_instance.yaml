@@ -15,7 +15,8 @@ parameters:
     type: string
     required: true
   zones:
-    type: string
+    type: array
+    required: true
   listeners:
     type: string
   subnets:
@@ -24,8 +25,6 @@ parameters:
     type: array
   scheme:
     type: string
-  complex_listeners:
-    type: array
   module_path:
     default: boto.ec2.elb
     immutable: true

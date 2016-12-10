@@ -388,6 +388,7 @@ This trigger is emitted when a single message is received from a queue.
 * elb\_create\_load\_balancer\_listeners.yaml
 * elb\_delete\_load\_balancer\_listeners.yaml
 * elb\_delete.yaml
+* elb\_delete\_lb\_policy.yaml
 * elb\_deregister\_instances.yaml
 * elb\_describe\_instance\_health.yaml
 * elb\_detach\_lb\_from\_subnets.yaml

@@ -22,10 +22,13 @@ parameters:
     description: 'ex: 80,80,HTTP#443,443,TCP'
     type: string
   subnets:
+    description: 'subnet-001,subnet-002'
     type: array
   security_groups:
+    description: 'sec-001,sec002'
     type: array
   scheme:
+    description: 'internet-facing or internal'
     type: string
   module_path:
     default: boto.ec2.elb

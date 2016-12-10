@@ -1,5 +1,5 @@
 from lib import action
-
+from lib import util
 
 class ActionManager(action.BaseAction):
 
@@ -12,6 +12,9 @@ class ActionManager(action.BaseAction):
             kwargs['user_data'] = self.st2_user_data()
         if action == 'create_tags':
             kwargs['tags'] = self.split_tags(kwargs['tags'])
+        if action == 'create_load_balancer':
+            if kwargs['listeners']  is not None:
+                kwargs['listeners'] = util.get_listners(kwargs['listeners'])            
         if action in ('add_a', 'update_a'):
             kwargs['value'] = kwargs['value'].split(',')
         if 'cls' in kwargs.keys():

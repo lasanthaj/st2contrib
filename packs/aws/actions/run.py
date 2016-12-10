@@ -12,7 +12,7 @@ class ActionManager(action.BaseAction):
             kwargs['user_data'] = self.st2_user_data()
         if action == 'create_tags':
             kwargs['tags'] = self.split_tags(kwargs['tags'])
-        if action == 'create_load_balancer':
+        if action == 'create_load_balancer' or action == 'create_load_balancer_listeners':
             if kwargs['listeners']  is not None:
                 kwargs['listeners'] = util.get_listners(kwargs['listeners'])            
         if action in ('add_a', 'update_a'):

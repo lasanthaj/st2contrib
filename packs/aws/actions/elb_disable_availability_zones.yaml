@@ -11,10 +11,12 @@ parameters:
     default: ELBConnection
     immutable: true
     type: string
-  name:
+  load_balancer_name:
     type: string
-  ports:
+    required: true
+  load_balancer_name:
     type: array
+    required: true
   module_path:
     default: boto.ec2.elb
     immutable: true

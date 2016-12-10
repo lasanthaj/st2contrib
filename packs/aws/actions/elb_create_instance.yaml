@@ -15,9 +15,11 @@ parameters:
     type: string
     required: true
   zones:
+    description: 'ex: eu-west-1a, eu-west-1b'
     type: array
     required: true
   listeners:
+    description: 'ex: 80,80,HTTP#443,443,TCP'
     type: string
   subnets:
     type: array

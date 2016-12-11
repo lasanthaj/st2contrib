@@ -17,10 +17,10 @@ parameters:
   zones:
     description: 'ex: eu-west-1a, eu-west-1b'
     type: array
-    required: true
   listeners:
     description: 'ex: 80,80,HTTP#443,443,TCP'
     type: string
+    required: true
   subnets:
     description: 'subnet-001,subnet-002'
     type: array

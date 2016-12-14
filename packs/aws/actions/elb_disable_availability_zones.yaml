@@ -14,7 +14,7 @@ parameters:
   load_balancer_name:
     type: string
     required: true
-  load_balancer_name:
+  zones_to_remove:
     type: array
     required: true
   module_path:

@@ -208,6 +208,8 @@ class ResultSets(object):
             return [self.formatter(item) for item in output]
         elif isinstance(output, dict):
             return {key: self.formatter(value) for key, value in six.iteritems(output)}
+        elif isinstance(output, unicode):
+            return output
         else:
             return self.selector(output)
 

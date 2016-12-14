@@ -164,9 +164,9 @@ class ResultSets(object):
         self.foo = ''
 
     def selector(self, output):
-        if output == True:
+        if output:
             return "SUCCESS"
-        elif output == False:
+        elif not output:
             return "ERROR"
         elif isinstance(output, ec2.instance.Reservation):
             return self.parseReservation(output)
@@ -186,8 +186,8 @@ class ResultSets(object):
             return self.parseEC2Object(output)
         elif isinstance(output, ec2.elb.loadbalancer.LoadBalancer):
             return self.parseLoadbalancers(output)
-        elif isinstance(output,ec2.elb.instancestate.InstanceState):
-            return self.parseInstanceState(output)        
+        elif isinstance(output, ec2.elb.instancestate.InstanceState):
+            return self.parseInstanceState(output)
         elif isinstance(output, route53.record.Record):
             return self.parseRecord(output)
         elif isinstance(output, route53.zone.Zone):

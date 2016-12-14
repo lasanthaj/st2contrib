@@ -384,10 +384,11 @@ This trigger is emitted when a single message is received from a queue.
 
 * elb\_apply\_security\_groups\_to\_lb.yaml
 * elb\_attach\_lb\_to\_subnets.yaml
+* elb\_configure\_health\_check.yaml
 * elb\_create\_load\_balancer.yaml
 * elb\_create\_load\_balancer\_listeners.yaml
 * elb\_delete\_load\_balancer\_listeners.yaml
-* elb\_delete.yaml
+* elb\_delete\_load\_balancer.yaml
 * elb\_delete\_lb\_policy.yaml
 * elb\_deregister\_instances.yaml
 * elb\_describe\_instance\_health.yaml
@@ -396,6 +397,7 @@ This trigger is emitted when a single message is received from a queue.
 * elb\_enable\_availability\_zones.yaml
 * elb\_get\_all\_lb\_attributes.yaml
 * elb\_get\_all\_loadbalancers.yaml
+* elb\_get\_lb\_attribute.yaml
 * elb\_modify\_lb\_attribute.yaml
 * elb\_register\_instances.yaml
 * elb\_set\_lb\_listener\_SSL\_certificate.yaml

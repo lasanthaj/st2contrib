@@ -164,11 +164,7 @@ class ResultSets(object):
         self.foo = ''
 
     def selector(self, output):
-        if output:
-            return "SUCCESS"
-        elif not output:
-            return "ERROR"
-        elif isinstance(output, ec2.instance.Reservation):
+        if isinstance(output, ec2.instance.Reservation):
             return self.parseReservation(output)
         elif isinstance(output, ec2.instance.Instance):
             return self.parseInstance(output)

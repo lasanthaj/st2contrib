@@ -14,7 +14,9 @@ class ActionManager(action.BaseAction):
             kwargs['tags'] = self.split_tags(kwargs['tags'])
         if action == 'create_load_balancer' or action == 'create_load_balancer_listeners':
             if kwargs['listeners']  is not None:
-                kwargs['listeners'] = util.get_listners(kwargs['listeners'])            
+                kwargs['listeners'] = util.get_listners(kwargs['listeners'])  
+        if action == 'configure_health_check':
+            util.populate_elb_health_check(kwargs)                
         if action in ('add_a', 'update_a'):
             kwargs['value'] = kwargs['value'].split(',')
         if 'cls' in kwargs.keys():

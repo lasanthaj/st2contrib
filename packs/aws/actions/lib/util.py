@@ -1,3 +1,6 @@
+import boto.ec2.elb
+from boto.ec2.elb import HealthCheck
+
 def get_listners(listener_string):
         listeners = listener_string.split('#')
         
@@ -13,3 +16,24 @@ def get_listners(listener_string):
                 listener_list.append(tup)
 
         return listener_list
+
+def populate_elb_health_check(kwargs):
+
+        healthy_threshold = kwargs['healthy_threshold']
+        interval = kwargs['interval']
+        unhealthy_threshold = kwargs['unhealthy_threshold']
+        target = kwargs['target']
+
+        health_check = HealthCheck(
+                        interval=int(healthy_threshold),
+                        healthy_threshold=int(interval),
+                        unhealthy_threshold=int(unhealthy_threshold),
+                        target='TCP:22')
+        
+
+        del kwargs['healthy_threshold']
+        del kwargs['interval']
+        del kwargs['unhealthy_threshold']
+        del kwargs['target']
+
+        kwargs['health_check']=health_check

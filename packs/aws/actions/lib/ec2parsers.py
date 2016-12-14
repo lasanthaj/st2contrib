@@ -271,7 +271,10 @@ class ResultSets(object):
 
     def parseLoadbalancers(self, output):
         return output.__str__()
-
+    
+    def parseInstanceState(self, output):
+        return output.__str__()
+    
     def parseEC2Object(self, output):
         # Looks like everything that is an EC2Object pretty much only has these extra
         # 'unparseable' properties so handle region and connection specially.

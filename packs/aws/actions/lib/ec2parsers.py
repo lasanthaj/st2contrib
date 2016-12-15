@@ -4,7 +4,6 @@ from boto import ec2
 from boto import route53
 from boto import cloudformation
 from boto import rds
-from boto import s3
 from boto.s3.bucket import Bucket
 
 

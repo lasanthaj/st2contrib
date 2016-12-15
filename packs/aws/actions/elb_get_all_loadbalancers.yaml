@@ -13,7 +13,6 @@ parameters:
     type: string
   load_balancer_names:
     type: array
-    required: true
   marker:
     type: string
   module_path:

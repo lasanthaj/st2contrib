@@ -182,6 +182,8 @@ class ResultSets(object):
             return self.parseEC2Object(output)
         elif isinstance(output, ec2.elb.loadbalancer.LoadBalancer):
             return self.parseLoadbalancers(output)
+        elif isinstance(output, ec2.elb.attributes.LbAttributes):
+            return self.parseLbAttribute(output)
         elif isinstance(output, ec2.elb.instancestate.InstanceState):
             return self.parseInstanceState(output)
         elif isinstance(output, route53.record.Record):
@@ -269,6 +271,9 @@ class ResultSets(object):
         return output.__str__()
 
     def parseInstanceState(self, output):
+        return output.__str__()
+    
+    def parseLbAttribute(slef,output):
         return output.__str__()
 
     def parseEC2Object(self, output):

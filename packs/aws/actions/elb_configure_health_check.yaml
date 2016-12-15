@@ -15,6 +15,7 @@ parameters:
   name:
     type: string
     required: true
+    description: 'Loadbalancer Name'
   interval:
     type: string
     required: true
@@ -26,7 +27,8 @@ parameters:
     required: true     
   target:
     type: string
-    required: true      
+    required: true
+    description: 'TCP:22'
   module_path:
     default: boto.ec2.elb
     immutable: true

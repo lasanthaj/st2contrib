@@ -6,7 +6,7 @@ def get_listners(listener_string):
     listener_list = []
 
     if len(listeners) == 0:
-        listeners = listenerlistener_list = []_string
+        listeners = listener_string
 
     for i in range(len(listeners)):
         values = listeners[i].split(',')

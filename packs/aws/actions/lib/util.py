@@ -3,10 +3,10 @@ from boto.ec2.elb import HealthCheck
 
 def get_listners(listener_string):
     listeners = listener_string.split('#')
+    listener_list = []
 
     if len(listeners) == 0:
-        listeners = listener_string
-        listener_list = []
+        listeners = listenerlistener_list = []_string
 
     for i in range(len(listeners)):
         values = listeners[i].split(',')
